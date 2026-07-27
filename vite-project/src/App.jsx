@@ -1,5 +1,8 @@
+import Greet from './components/Greet.jsx';
+import Add from './components/Add.jsx';
+
 const App = () => {
-  return <section>Hello! This is my First React App</section>;
+  return <div><Greet/><Add/></div>;
 };
 
 export default App;
