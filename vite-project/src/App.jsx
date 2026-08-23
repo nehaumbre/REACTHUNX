@@ -7,7 +7,8 @@
 // import JSXRULES from './components/JSXRULES.jsx';
 // import ProductInfo from './components/ProductInfo.jsx';
 // import Greetings from './components/Greetings.jsx';
-
+import ProductList from './components/ProductList.jsx';
+import UserList from './components/userList.jsx';
 const App = () => {
   const numbers = [1, 2, 3, 4, 5];
   const usersInfo = [
@@ -272,6 +273,8 @@ const App = () => {
           <hr />
         </ul>
       ))}
+      <ProductList />
+      <UserList />
     </main>
   );
 };
