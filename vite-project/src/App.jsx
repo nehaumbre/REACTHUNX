@@ -7,203 +7,227 @@
 // import JSXRULES from './components/JSXRULES.jsx';
 // import ProductInfo from './components/ProductInfo.jsx';
 // import Greetings from './components/Greetings.jsx';
-import ProductList from './components/ProductList.jsx';
-import UserList from './components/userList.jsx';
+// import ProductList from './components/ProductList.jsx';
+import React from "react";
+import AnimeCard from "./components/AnimeCard";
+import AnimeReview from "./components/AnimeReview.jsx";
+
+// import UserList from './components/userList.jsx';
 const App = () => {
-  const numbers = [1, 2, 3, 4, 5];
-  const usersInfo = [
+  const animeList = [
     {
-      username: "aarav_mehta",
-      email: "aarav.mehta@gmail.com",
-      location: "Bengaluru, India",
+      id: 1,
+      title: "One Piece",
+      genre: "Adventure",
+      episodes: 1100,
     },
     {
-      username: "sophia_w",
-      email: "sophia.williams@outlook.com",
-      location: "Manchester, UK",
+      id: 2,
+      title: "Jujutsu Kaisen",
+      genre: "Action",
+      episodes: 47,
     },
     {
-      username: "mike_chen92",
-      email: "mike.chen92@yahoo.com",
-      location: "San Francisco, USA",
-    },
-    {
-      username: "priya_codes",
-      email: "priya.sharma@gmail.com",
-      location: "Hyderabad, India",
-    },
-    {
-      username: "daniel_rodriguez",
-      email: "daniel.r@proton.me",
-      location: "Barcelona, Spain",
-    },
-    {
-      username: "yuki_tanaka",
-      email: "yuki.tanaka@gmail.com",
-      location: "Tokyo, Japan",
-    },
-    {
-      username: "emma_90",
-      email: "emma.johnson@icloud.com",
-      location: "Melbourne, Australia",
-    },
-    {
-      username: "devraj_s",
-      email: "devraj.singh@outlook.com",
-      location: "Delhi, India",
-    },
-    {
-      username: "lucas_m",
-      email: "lucas.martin@gmail.com",
-      location: "Berlin, Germany",
-    },
-    {
-      username: "zoe_parker",
-      email: "zoe.parker@yahoo.com",
-      location: "Toronto, Canada",
+      id: 3,
+      title: "Frieren",
+      genre: "Fantasy",
+      episodes: 28,
     },
   ];
+  // const numbers = [1, 2, 3, 4, 5];
+  // const usersInfo = [
+  //   {
+  //     username: "aarav_mehta",
+  //     email: "aarav.mehta@gmail.com",
+  //     location: "Bengaluru, India",
+  //   },
+  //   {
+  //     username: "sophia_w",
+  //     email: "sophia.williams@outlook.com",
+  //     location: "Manchester, UK",
+  //   },
+  //   {
+  //     username: "mike_chen92",
+  //     email: "mike.chen92@yahoo.com",
+  //     location: "San Francisco, USA",
+  //   },
+  //   {
+  //     username: "priya_codes",
+  //     email: "priya.sharma@gmail.com",
+  //     location: "Hyderabad, India",
+  //   },
+  //   {
+  //     username: "daniel_rodriguez",
+  //     email: "daniel.r@proton.me",
+  //     location: "Barcelona, Spain",
+  //   },
+  //   {
+  //     username: "yuki_tanaka",
+  //     email: "yuki.tanaka@gmail.com",
+  //     location: "Tokyo, Japan",
+  //   },
+  //   {
+  //     username: "emma_90",
+  //     email: "emma.johnson@icloud.com",
+  //     location: "Melbourne, Australia",
+  //   },
+  //   {
+  //     username: "devraj_s",
+  //     email: "devraj.singh@outlook.com",
+  //     location: "Delhi, India",
+  //   },
+  //   {
+  //     username: "lucas_m",
+  //     email: "lucas.martin@gmail.com",
+  //     location: "Berlin, Germany",
+  //   },
+  //   {
+  //     username: "zoe_parker",
+  //     email: "zoe.parker@yahoo.com",
+  //     location: "Toronto, Canada",
+  //   },
+  // ];
 
-  const crunchyrollCustomers = [
-    {
-      username: "anime_kaiser",
-      email: "kaiser@example.com",
-      location: "Tokyo, Japan",
-      favoriteAnime: "Jujutsu Kaisen",
-      watching: ["One Piece", "Demon Slayer", "Solo Leveling"],
-      episodesWatched: 247,
-      subscription: "Mega Fan",
-    },
-    {
-      username: "shonen_slayer",
-      email: "shonen@example.com",
-      location: "Mumbai, India",
-      favoriteAnime: "One Piece",
-      watching: ["One Piece", "My Hero Academia"],
-      episodesWatched: 893,
-      subscription: "Fan",
-    },
-    {
-      username: "mika_chan",
-      email: "mika@example.com",
-      location: "Osaka, Japan",
-      favoriteAnime: "Frieren: Beyond Journey's End",
-      watching: ["Frieren", "Spy x Family", "Haikyuu!!"],
-      episodesWatched: 156,
-      subscription: "Ultimate Fan",
-    },
-    {
-      username: "otaku_night",
-      email: "otaku@example.com",
-      location: "Seoul, South Korea",
-      favoriteAnime: "Solo Leveling",
-      watching: ["Solo Leveling", "Attack on Titan", "Chainsaw Man"],
-      episodesWatched: 312,
-      subscription: "Mega Fan",
-    },
-    {
-      username: "ramen_and_anime",
-      email: "ramen@example.com",
-      location: "New York, USA",
-      favoriteAnime: "Naruto",
-      watching: ["Naruto", "Bleach", "One Piece"],
-      episodesWatched: 1240,
-      subscription: "Ultimate Fan",
-    },
-  ];
+  // const crunchyrollCustomers = [
+  //   {
+  //     username: "anime_kaiser",
+  //     email: "kaiser@example.com",
+  //     location: "Tokyo, Japan",
+  //     favoriteAnime: "Jujutsu Kaisen",
+  //     watching: ["One Piece", "Demon Slayer", "Solo Leveling"],
+  //     episodesWatched: 247,
+  //     subscription: "Mega Fan",
+  //   },
+  //   {
+  //     username: "shonen_slayer",
+  //     email: "shonen@example.com",
+  //     location: "Mumbai, India",
+  //     favoriteAnime: "One Piece",
+  //     watching: ["One Piece", "My Hero Academia"],
+  //     episodesWatched: 893,
+  //     subscription: "Fan",
+  //   },
+  //   {
+  //     username: "mika_chan",
+  //     email: "mika@example.com",
+  //     location: "Osaka, Japan",
+  //     favoriteAnime: "Frieren: Beyond Journey's End",
+  //     watching: ["Frieren", "Spy x Family", "Haikyuu!!"],
+  //     episodesWatched: 156,
+  //     subscription: "Ultimate Fan",
+  //   },
+  //   {
+  //     username: "otaku_night",
+  //     email: "otaku@example.com",
+  //     location: "Seoul, South Korea",
+  //     favoriteAnime: "Solo Leveling",
+  //     watching: ["Solo Leveling", "Attack on Titan", "Chainsaw Man"],
+  //     episodesWatched: 312,
+  //     subscription: "Mega Fan",
+  //   },
+  //   {
+  //     username: "ramen_and_anime",
+  //     email: "ramen@example.com",
+  //     location: "New York, USA",
+  //     favoriteAnime: "Naruto",
+  //     watching: ["Naruto", "Bleach", "One Piece"],
+  //     episodesWatched: 1240,
+  //     subscription: "Ultimate Fan",
+  //   },
+  // ];
 
-  const animeDataforUser = [
-    {
-      id: 101,
-      username: "voidwalker",
-      email: "voidwalker@example.com",
-      location: "Mumbai, India",
-      avatar: "https://i.pravatar.cc/150?img=12",
-      role: "Moderator",
-      level: 42,
-      isOnline: true,
-      favoriteGenre: "Action",
-      favoriteAnime: "Jujutsu Kaisen",
-      watchlist: ["One Piece", "Bleach", "Chainsaw Man"],
-      stats: {
-        episodesWatched: 843,
-        hoursWatched: 1267,
-        reviewsWritten: 34,
-      },
-    },
-    {
-      id: 102,
-      username: "moonlit_fox",
-      email: "moonlit@example.com",
-      location: "Kyoto, Japan",
-      avatar: "https://i.pravatar.cc/150?img=47",
-      role: "Member",
-      level: 27,
-      isOnline: false,
-      favoriteGenre: "Fantasy",
-      favoriteAnime: "Frieren: Beyond Journey's End",
-      watchlist: ["Frieren", "Violet Evergarden", "Spy x Family"],
-      stats: {
-        episodesWatched: 421,
-        hoursWatched: 638,
-        reviewsWritten: 18,
-      },
-    },
-    {
-      id: 103,
-      username: "senpai_mode",
-      email: "senpai@example.com",
-      location: "Bengaluru, India",
-      avatar: "https://i.pravatar.cc/150?img=33",
-      role: "Premium Member",
-      level: 61,
-      isOnline: true,
-      favoriteGenre: "Adventure",
-      favoriteAnime: "One Piece",
-      watchlist: ["One Piece", "Hunter x Hunter", "My Hero Academia"],
-      stats: {
-        episodesWatched: 1298,
-        hoursWatched: 1947,
-        reviewsWritten: 72,
-      },
-    },
-    {
-      id: 104,
-      username: "akira_404",
-      email: "akira@example.com",
-      location: "Seoul, South Korea",
-      avatar: "https://i.pravatar.cc/150?img=25",
-      role: "Member",
-      level: 19,
-      isOnline: true,
-      favoriteGenre: "Thriller",
-      favoriteAnime: "Death Note",
-      watchlist: ["Death Note", "Monster", "Attack on Titan"],
-      stats: {
-        episodesWatched: 287,
-        hoursWatched: 431,
-        reviewsWritten: 9,
-      },
-    },
-    {
-      id: 105,
-      username: "ramen.exe",
-      email: "ramen@example.com",
-      location: "New York, USA",
-      avatar: "https://i.pravatar.cc/150?img=68",
-      role: "Member",
-      level: 35,
-      isOnline: false,
-      favoriteGenre: "Comedy",
-      favoriteAnime: "Gintama",
-      watchlist: ["Gintama", "Saiki K", "Konosuba"],
-      stats: {
-        episodesWatched: 612,
-        hoursWatched: 918,
-        reviewsWritten: 26,
-      },
-    },
-  ];
+  // const animeDataforUser = [
+  //   {
+  //     id: 101,
+  //     username: "voidwalker",
+  //     email: "voidwalker@example.com",
+  //     location: "Mumbai, India",
+  //     avatar: "https://i.pravatar.cc/150?img=12",
+  //     role: "Moderator",
+  //     level: 42,
+  //     isOnline: true,
+  //     favoriteGenre: "Action",
+  //     favoriteAnime: "Jujutsu Kaisen",
+  //     watchlist: ["One Piece", "Bleach", "Chainsaw Man"],
+  //     stats: {
+  //       episodesWatched: 843,
+  //       hoursWatched: 1267,
+  //       reviewsWritten: 34,
+  //     },
+  //   },
+  //   {
+  //     id: 102,
+  //     username: "moonlit_fox",
+  //     email: "moonlit@example.com",
+  //     location: "Kyoto, Japan",
+  //     avatar: "https://i.pravatar.cc/150?img=47",
+  //     role: "Member",
+  //     level: 27,
+  //     isOnline: false,
+  //     favoriteGenre: "Fantasy",
+  //     favoriteAnime: "Frieren: Beyond Journey's End",
+  //     watchlist: ["Frieren", "Violet Evergarden", "Spy x Family"],
+  //     stats: {
+  //       episodesWatched: 421,
+  //       hoursWatched: 638,
+  //       reviewsWritten: 18,
+  //     },
+  //   },
+  //   {
+  //     id: 103,
+  //     username: "senpai_mode",
+  //     email: "senpai@example.com",
+  //     location: "Bengaluru, India",
+  //     avatar: "https://i.pravatar.cc/150?img=33",
+  //     role: "Premium Member",
+  //     level: 61,
+  //     isOnline: true,
+  //     favoriteGenre: "Adventure",
+  //     favoriteAnime: "One Piece",
+  //     watchlist: ["One Piece", "Hunter x Hunter", "My Hero Academia"],
+  //     stats: {
+  //       episodesWatched: 1298,
+  //       hoursWatched: 1947,
+  //       reviewsWritten: 72,
+  //     },
+  //   },
+  //   {
+  //     id: 104,
+  //     username: "akira_404",
+  //     email: "akira@example.com",
+  //     location: "Seoul, South Korea",
+  //     avatar: "https://i.pravatar.cc/150?img=25",
+  //     role: "Member",
+  //     level: 19,
+  //     isOnline: true,
+  //     favoriteGenre: "Thriller",
+  //     favoriteAnime: "Death Note",
+  //     watchlist: ["Death Note", "Monster", "Attack on Titan"],
+  //     stats: {
+  //       episodesWatched: 287,
+  //       hoursWatched: 431,
+  //       reviewsWritten: 9,
+  //     },
+  //   },
+  //   {
+  //     id: 105,
+  //     username: "ramen.exe",
+  //     email: "ramen@example.com",
+  //     location: "New York, USA",
+  //     avatar: "https://i.pravatar.cc/150?img=68",
+  //     role: "Member",
+  //     level: 35,
+  //     isOnline: false,
+  //     favoriteGenre: "Comedy",
+  //     favoriteAnime: "Gintama",
+  //     watchlist: ["Gintama", "Saiki K", "Konosuba"],
+  //     stats: {
+  //       episodesWatched: 612,
+  //       hoursWatched: 918,
+  //       reviewsWritten: 26,
+  //     },
+  //   },
+  // ];
 
   return (
     // <section id="section">
@@ -218,22 +242,32 @@ const App = () => {
     //   <Greetings />
     // </section>
     <main>
-      {numbers.map((number) => (
+      <h1>Anime Card: Passing an object as a prop</h1>
+      {animeList.map((anime) => (
+        <React.Fragment key={anime.id}>
+          <AnimeCard anime={anime} />
+          <AnimeReview anime={anime} />
+        </React.Fragment>
+      ))}
+
+      <User banana="I hate banana!☜(ﾟヮﾟ☜)" />
+      {/* anime={anime} Left anime → the prop name Right anime → the JavaScript variable/value */}
+      {/* {numbers.map((number) => (
         <ul key={number}>
           <li>{number}</li>
         </ul>
-      ))}
-      {usersInfo.map((user, index) => (
+      ))} */}
+      {/* {usersInfo.map((user, index) => (
         <ul key={index}>
           <li>Username: {user.username}</li>
           <li>Email: {user.email}</li>
           <li>Location: {user.location}</li>
         </ul>
-      ))}
+      ))} */}
 
-      <h1>Crunchyroll Customers: {crunchyrollCustomers.length}</h1>
+      {/* <h1>Crunchyroll Customers: {crunchyrollCustomers.length}</h1> */}
       {/* below i have used destrucrturing   */}
-      {crunchyrollCustomers.map(({ username, email, location, favoriteAnime, watching, episodesWatched, subscription }) => (
+      {/* {crunchyrollCustomers.map(({ username, email, location, favoriteAnime, watching, episodesWatched, subscription }) => (
         <ul>
           <li key={username}>
             <p>Username: {username}</p>
@@ -246,9 +280,9 @@ const App = () => {
           </li>
           <hr />
         </ul>
-      ))}
-      <h1>Anime Data for Users: {animeDataforUser.length}</h1>
-      {animeDataforUser.map((user) => (
+      ))} */}
+      {/* <h1>Anime Data for Users: {animeDataforUser.length}</h1> */}
+      {/* {animeDataforUser.map((user) => (
         <ul key={user.id}>
           <li>Username: {user.username}</li>
           <li>Email: {user.email}</li>
@@ -272,11 +306,20 @@ const App = () => {
           <li>Reviews Written: {user.stats.reviewsWritten}</li>
           <hr />
         </ul>
-      ))}
-      <ProductList />
-      <UserList />
+      ))} */}
+      {/* <ProductList /> */}
+      {/* <UserList /> */}
     </main>
   );
 };
 
+const User = (props) => {
+  console.log("User component rendered:", props);
+  return (
+    <section>
+      <br />
+      {props.banana}
+    </section>
+  );
+};
 export default App;
