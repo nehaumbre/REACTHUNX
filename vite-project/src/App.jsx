@@ -8,9 +8,10 @@
 // import ProductInfo from './components/ProductInfo.jsx';
 // import Greetings from './components/Greetings.jsx';
 // import ProductList from './components/ProductList.jsx';
-import React from "react";
+// import React from "react";
 import AnimeCard from "./components/AnimeCard";
 import AnimeReview from "./components/AnimeReview.jsx";
+import AnimeWatchExperience from "./components/AnimeWatchExperience.jsx";
 
 // import UserList from './components/userList.jsx';
 const App = () => {
@@ -242,14 +243,16 @@ const App = () => {
     //   <Greetings />
     // </section>
     <main>
+      <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }}>
       <h1>Anime Card: Passing an object as a prop</h1>
       {animeList.map((anime) => (
         <div key={anime.id}>
           <AnimeCard anime={anime} />
           <AnimeReview anime={anime} />
+          <AnimeWatchExperience anime={anime}/>
         </div>
       ))}
-
+      </section>
       <User banana="I hate banana!☜(ﾟヮﾟ☜)" />
       {/* anime={anime} Left anime → the prop name Right anime → the JavaScript variable/value */}
       {/* {numbers.map((number) => (
