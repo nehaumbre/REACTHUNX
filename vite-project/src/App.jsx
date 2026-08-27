@@ -12,7 +12,9 @@
 import AnimeCard from "./components/AnimeCard";
 import AnimeReview from "./components/AnimeReview.jsx";
 import AnimeWatchExperience from "./components/AnimeWatchExperience.jsx";
-
+import Product from "./components/Product.jsx";
+import Consumer from "./components/Consumer.jsx";
+import Card from "./components/Card.jsx";
 // import UserList from './components/userList.jsx';
 const App = () => {
   const animeList = [
@@ -243,17 +245,42 @@ const App = () => {
     //   <Greetings />
     // </section>
     <main>
-      <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }}>
-      <h1>Anime Card: Passing an object as a prop</h1>
-      {animeList.map((anime) => (
-        <div key={anime.id}>
-          <AnimeCard anime={anime} />
-          <AnimeReview anime={anime} />
-          <AnimeWatchExperience anime={anime}/>
-        </div>
-      ))}
+      <section
+        style={{
+          border: "2px solid black",
+          padding: "10px",
+          marginBottom: "20px",
+        }}
+      >
+        <h1>Anime Card: Passing an object as a prop</h1>
+        {animeList.map((anime) => (
+          <div key={anime.id}>
+            <AnimeCard anime={anime} />
+            <AnimeReview anime={anime} />
+            <AnimeWatchExperience anime={anime} />
+          </div>
+        ))}
       </section>
-      <User banana="I hate banana!☜(ﾟヮﾟ☜)" apple = {30} isFruit= {true} fruits = {["apple", "banana", "cherry"]} />
+      <User
+        banana="I hate banana!☜(ﾟヮﾟ☜)"
+        apple={30}
+        isFruit={true}
+        fruits={["apple", "banana", "cherry"]}
+      />
+      <Product name="Anime Figure" price={29.99} />
+      <Consumer name="John Doe" age={30} isMember={true} />
+      <Card style={{ backgroundColor: "#4caf50", padding: "15px", borderRadius: "8px" }}>
+        <h1>Card Component</h1>
+        <p>This is some content inside the card1.</p>
+      </Card>
+      <Card style = {{ backgroundColor: "#d84e4e", padding: "20px", borderRadius: "10px" }}>
+        <h1>Another Card Component</h1>
+        <p>This is some content inside the card2.</p>
+      </Card>
+      <Card style = {{ backgroundColor: "#c9b0bf", padding: "40px", borderRadius: "50px" , boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"  }}>
+        <h1>Another Card Component</h1>
+        <p>This is some content inside the card3.</p>
+      </Card>
       {/* anime={anime} Left anime → the prop name Right anime → the JavaScript variable/value */}
       {/* {numbers.map((number) => (
         <ul key={number}>
@@ -316,19 +343,26 @@ const App = () => {
   );
 };
 
-const User = (props) => {
-  console.log("User component rendered:", props);
+// destructuring props in the function parameter itself
+const User = ({ banana, apple, isFruit, fruits }) => {
+  console.log("User component rendered:", { banana, apple, isFruit, fruits });
   return (
-    <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }} >
+    <section
+      style={{
+        border: "2px solid black",
+        padding: "10px",
+        marginBottom: "20px",
+      }}
+    >
       <br />
-      {props.banana}
+      {banana}
       <br />
-      {props.apple}
+      {apple}
       <br />
-      {props.isFruit ? "Yes, it's a fruit!" : "No, it's not a fruit."}
+      {isFruit ? "Yes, it's a fruit!" : "No, it's not a fruit."}
       <br />
       <ul>
-        {props.fruits.map((fruit, index) => (
+        {fruits.map((fruit, index) => (
           <li key={index}>{fruit}</li>
         ))}
       </ul>
