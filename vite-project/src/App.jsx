@@ -253,7 +253,7 @@ const App = () => {
         </div>
       ))}
       </section>
-      <User banana="I hate banana!☜(ﾟヮﾟ☜)" />
+      <User banana="I hate banana!☜(ﾟヮﾟ☜)" apple = {30} isFruit= {true} fruits = {["apple", "banana", "cherry"]} />
       {/* anime={anime} Left anime → the prop name Right anime → the JavaScript variable/value */}
       {/* {numbers.map((number) => (
         <ul key={number}>
@@ -319,9 +319,19 @@ const App = () => {
 const User = (props) => {
   console.log("User component rendered:", props);
   return (
-    <section>
+    <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }} >
       <br />
       {props.banana}
+      <br />
+      {props.apple}
+      <br />
+      {props.isFruit ? "Yes, it's a fruit!" : "No, it's not a fruit."}
+      <br />
+      <ul>
+        {props.fruits.map((fruit, index) => (
+          <li key={index}>{fruit}</li>
+        ))}
+      </ul>
     </section>
   );
 };
