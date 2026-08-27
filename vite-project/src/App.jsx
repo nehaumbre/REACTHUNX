@@ -244,10 +244,10 @@ const App = () => {
     <main>
       <h1>Anime Card: Passing an object as a prop</h1>
       {animeList.map((anime) => (
-        <React.Fragment key={anime.id}>
+        <div key={anime.id}>
           <AnimeCard anime={anime} />
           <AnimeReview anime={anime} />
-        </React.Fragment>
+        </div>
       ))}
 
       <User banana="I hate banana!☜(ﾟヮﾟ☜)" />
