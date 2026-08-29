@@ -8,7 +8,7 @@ const Weather = ({ temperature }) => {
     return (
         <div>
             {
-                temperature <= 10 ? <Cold/> : temperature >= 15 && temperature <25 ? <Warm/> : <Hot/>
+                temperature <= 15 ? <Cold/> : temperature > 15 && temperature <25 ? <Warm/> : <Hot/>
             }
         </div>
     )

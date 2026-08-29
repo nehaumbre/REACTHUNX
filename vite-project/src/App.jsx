@@ -279,7 +279,7 @@ const App = () => {
     // </section>
     <main>
       <section>
-        <p>Temperature is <Weather temperature={30} /></p>
+        <p>Temperature is : <Weather temperature={16} /></p>
         <p>User Status : <UserStatus loggedIn={true} isAdmin={false} /></p>
         <p>Greet Time of Day : <Greet timeOfDay="evening" /></p>
       </section>
