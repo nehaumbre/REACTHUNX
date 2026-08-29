@@ -9,34 +9,65 @@
 // import Greetings from './components/Greetings.jsx';
 // import ProductList from './components/ProductList.jsx';
 // import React from "react";
-import AnimeCard from "./components/AnimeCard";
-import AnimeReview from "./components/AnimeReview.jsx";
-import AnimeWatchExperience from "./components/AnimeWatchExperience.jsx";
-import Product from "./components/Product.jsx";
-import Consumer from "./components/Consumer.jsx";
-import Card from "./components/Card.jsx";
+// import AnimeCard from "./components/AnimeCard";
+// import AnimeReview from "./components/AnimeReview.jsx";
+// import AnimeWatchExperience from "./components/AnimeWatchExperience.jsx";
+// import Product from "./components/Product.jsx";
+// import Consumer from "./components/Consumer.jsx";
+// import Card from "./components/Card.jsx";
 // import UserList from './components/userList.jsx';
+
+// const ValidPasscode = () => <h1>Valid Passcode</h1>;
+// const InvalidPasscode = () => <h1>Invalid Passcode</h1>;
+
+// const IsLoggedIn = () => <h2>You are logged in.</h2>;
+// const IsLoggedOut = () => <h2>You are logged out.</h2>;
+
+// const SubscriptionStatus = ({ isSubscribed }) => {
+//   // if (isSubscribed) {
+//   //   return <h2>Thank you for subscribing!</h2>;
+//   // }
+//   // return <h2>Please subscribe to access premium content.</h2>;
+//   return isSubscribed ? (<h2>Thank you for subscribing!</h2>) : (<h2>Please subscribe to access premium content.</h2>);
+// };
+
+// const LoginStatus = ({ isLoggedIn }) => {
+//   if (isLoggedIn) {
+//     return <IsLoggedIn />;
+//   }
+//   return <IsLoggedOut />;
+// };
+
+
+// const Passcode = ({ isValid }) => {
+//   // if (isValid) {
+//   //   return <ValidPasscode />;
+//   // }
+//   // return <InvalidPasscode />;
+//   return isValid ? (<ValidPasscode />) : (<InvalidPasscode />);
+// };
+  
 const App = () => {
-  const animeList = [
-    {
-      id: 1,
-      title: "One Piece",
-      genre: "Adventure",
-      episodes: 1100,
-    },
-    {
-      id: 2,
-      title: "Jujutsu Kaisen",
-      genre: "Action",
-      episodes: 47,
-    },
-    {
-      id: 3,
-      title: "Frieren",
-      genre: "Fantasy",
-      episodes: 28,
-    },
-  ];
+  // const animeList = [
+  //   {
+  //     id: 1,
+  //     title: "One Piece",
+  //     genre: "Adventure",
+  //     episodes: 1100,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Jujutsu Kaisen",
+  //     genre: "Action",
+  //     episodes: 47,
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Frieren",
+  //     genre: "Fantasy",
+  //     episodes: 28,
+  //   },
+  // ];
   // const numbers = [1, 2, 3, 4, 5];
   // const usersInfo = [
   //   {
@@ -232,6 +263,7 @@ const App = () => {
   //   },
   // ];
 
+  
   return (
     // <section id="section">
     //   <h1>My Website</h1>
@@ -245,7 +277,16 @@ const App = () => {
     //   <Greetings />
     // </section>
     <main>
-      <section
+      {/* <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }}>
+        Passcode Status: <Passcode isValid={true} />
+      </section>
+      <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }}>
+        Login Status: <LoginStatus isLoggedIn={true} />
+      </section>
+      <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px", backgroundColor: "#bb8484" }}>
+        <h3>Subscription Status <SubscriptionStatus isSubscribed={true} /></h3>
+      </section> */}
+      {/* <section
         style={{
           border: "2px solid black",
           padding: "10px",
@@ -260,27 +301,27 @@ const App = () => {
             <AnimeWatchExperience anime={anime} />
           </div>
         ))}
-      </section>
-      <User
+      </section> */}
+      {/* <User
         banana="I hate banana!☜(ﾟヮﾟ☜)"
         apple={30}
         isFruit={true}
         fruits={["apple", "banana", "cherry"]}
-      />
-      <Product name="Anime Figure" price={29.99} />
+      /> */}
+      {/* <Product name="Anime Figure" price={29.99} />
       <Consumer name="John Doe" age={30} isMember={true} />
       <Card style={{ backgroundColor: "#4caf50", padding: "15px", borderRadius: "8px" }}>
         <h1>Card Component</h1>
         <p>This is some content inside the card1.</p>
-      </Card>
-      <Card style = {{ backgroundColor: "#d84e4e", padding: "20px", borderRadius: "10px" }}>
+      </Card> */}
+      {/* <Card style = {{ backgroundColor: "#d84e4e", padding: "20px", borderRadius: "10px" }}>
         <h1>Another Card Component</h1>
         <p>This is some content inside the card2.</p>
-      </Card>
-      <Card style = {{ backgroundColor: "#c9b0bf", padding: "40px", borderRadius: "50px" , boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"  }}>
+      </Card> */}
+      {/* <Card style = {{ backgroundColor: "#c9b0bf", padding: "40px", borderRadius: "50px" , boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"  }}>
         <h1>Another Card Component</h1>
         <p>This is some content inside the card3.</p>
-      </Card>
+      </Card> */}
       {/* anime={anime} Left anime → the prop name Right anime → the JavaScript variable/value */}
       {/* {numbers.map((number) => (
         <ul key={number}>
@@ -344,29 +385,29 @@ const App = () => {
 };
 
 // destructuring props in the function parameter itself
-const User = ({ banana, apple, isFruit, fruits }) => {
-  console.log("User component rendered:", { banana, apple, isFruit, fruits });
-  return (
-    <section
-      style={{
-        border: "2px solid black",
-        padding: "10px",
-        marginBottom: "20px",
-      }}
-    >
-      <br />
-      {banana}
-      <br />
-      {apple}
-      <br />
-      {isFruit ? "Yes, it's a fruit!" : "No, it's not a fruit."}
-      <br />
-      <ul>
-        {fruits.map((fruit, index) => (
-          <li key={index}>{fruit}</li>
-        ))}
-      </ul>
-    </section>
-  );
-};
+// const User = ({ banana, apple, isFruit, fruits }) => {
+//   console.log("User component rendered:", { banana, apple, isFruit, fruits });
+//   return (
+//     <section
+//       style={{
+//         border: "2px solid black",
+//         padding: "10px",
+//         marginBottom: "20px",
+//       }}
+//     >
+//       <br />
+//       {banana}
+//       <br />
+//       {apple}
+//       <br />
+//       {isFruit ? "Yes, it's a fruit!" : "No, it's not a fruit."}
+//       <br />
+//       <ul>
+//         {fruits.map((fruit, index) => (
+//           <li key={index}>{fruit}</li>
+//         ))}
+//       </ul>
+//     </section>
+//   );
+// };
 export default App;
