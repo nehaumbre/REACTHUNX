@@ -2,7 +2,7 @@
 const Card = ({children, style}) => {
   return (
     <div style={{ border: "1px solid #ccc", padding: "10px", borderRadius: "5px", boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)", ...style }}>
-      {children}
+      C:{children}
     </div>
   )
 }
