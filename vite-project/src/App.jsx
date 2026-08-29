@@ -1,4 +1,4 @@
-// import Greet from './components/Greet.jsx';
+import Greet from './components/Greet.jsx';
 // import Add from './components/Add.jsx';
 // import Header from './components/Header.jsx';
 // import MainContent from './components/MainContent.jsx';
@@ -16,7 +16,8 @@
 // import Consumer from "./components/Consumer.jsx";
 // import Card from "./components/Card.jsx";
 // import UserList from './components/userList.jsx';
-
+import Weather from './components/Weather.jsx';
+import UserStatus from './components/UserStatus.jsx';
 // const ValidPasscode = () => <h1>Valid Passcode</h1>;
 // const InvalidPasscode = () => <h1>Invalid Passcode</h1>;
 
@@ -277,6 +278,11 @@ const App = () => {
     //   <Greetings />
     // </section>
     <main>
+      <section>
+        <p>Temperature is <Weather temperature={30} /></p>
+        <p>User Status : <UserStatus loggedIn={true} isAdmin={false} /></p>
+        <p>Greet Time of Day : <Greet timeOfDay="evening" /></p>
+      </section>
       {/* <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }}>
         Passcode Status: <Passcode isValid={true} />
       </section>
