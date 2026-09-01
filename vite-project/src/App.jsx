@@ -1,4 +1,7 @@
-import Greet from './components/Greet.jsx';
+// import Greet from './components/Greet.jsx';
+// import StyledCard from './components/StyledCard.jsx';
+// import ProfileCard from './components/ProfileCard.jsx';
+// import IconComponent from './components/IconComponent.jsx';
 // import Add from './components/Add.jsx';
 // import Header from './components/Header.jsx';
 // import MainContent from './components/MainContent.jsx';
@@ -16,10 +19,11 @@ import Greet from './components/Greet.jsx';
 // import Consumer from "./components/Consumer.jsx";
 // import Card from "./components/Card.jsx";
 // import UserList from './components/userList.jsx';
-import { CgAlbum } from "react-icons/cg";
-import Weather from './components/Weather.jsx';
-import UserStatus from './components/UserStatus.jsx';
-import "./index.css";
+// import { CgAlbum } from "react-icons/cg";
+// import Weather from './components/Weather.jsx';
+// import UserStatus from './components/UserStatus.jsx';
+// import "./index.css";
+import ClickMeComponent from "./components/ClickMeComponent";
 // const ValidPasscode = () => <h1>Valid Passcode</h1>;
 // const InvalidPasscode = () => <h1>Invalid Passcode</h1>;
 
@@ -266,12 +270,12 @@ const App = () => {
   //   },
   // ];
 
-  const stylesforSectionWeather = {
-    color: "yellow",
-    backgroundColor: "OrangeRed",
-    padding: "10px",
-    marginBottom: "20px",
-  };
+  // const stylesforSectionWeather = {
+  //   color: "yellow",
+  //   backgroundColor: "OrangeRed",
+  //   padding: "10px",
+  //   marginBottom: "20px",
+  // };
 
   return (
     // <section id="section">
@@ -286,11 +290,11 @@ const App = () => {
     //   <Greetings />
     // </section>
     <main>
-      <section style ={{color:"pink", backgroundColor:"DarkSlateBlue", padding:"10px", marginBottom:"20px"}}>
+      {/* <section style ={{color:"pink", backgroundColor:"DarkSlateBlue", padding:"10px", marginBottom:"20px"}}>
         <p style= {stylesforSectionWeather}>Temperature is : <Weather temperature={16} /></p>
         <p>User Status : <UserStatus loggedIn={true} isAdmin={false} /></p>
         <p>Greet Time of Day : <Greet timeOfDay="evening" /></p>
-      </section>
+      </section> */}
       {/* <section style={{ border: "2px solid black", padding: "10px", marginBottom: "20px" }}>
         Passcode Status: <Passcode isValid={true} />
       </section>
@@ -394,7 +398,11 @@ const App = () => {
       ))} */}
       {/* <ProductList /> */}
       {/* <UserList /> */}
-      <CgAlbum size={50} color="red" />
+      {/* <CgAlbum size={50} color="red" />
+      <StyledCard />
+      <ProfileCard />
+      <IconComponent /> */}
+      <ClickMeComponent />
     </main>
   );
 };
